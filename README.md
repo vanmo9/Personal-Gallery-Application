@@ -25,7 +25,7 @@ This is a python web application that allows users to view photos posted by admi
 | User loads on to the page  |  User Views different photos that interest him/her. |
 | User clicks on a single photo  | Photo expands and user sees details of the photo. |
 | User Search for different categories of photos. | Photo with the given category is displayed. | 
-| User Search for different locationsof photos | Photo with the given location is displayed. |
+| User Search for different locations of photos | Photo with the given location is displayed. |
 | User clicks on the copy link button  |  Image url is copied. | 
 
 
