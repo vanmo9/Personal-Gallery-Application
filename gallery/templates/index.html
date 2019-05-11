@@ -1,0 +1,33 @@
+{% extends 'photo/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for image in images %}
+
+        <div class="col-md-4">
+            <a href="">{{image.image_name.url}}  {{category.title}}   {{image.title}} </a>
+
+        </div>
+
+        {{% else %}}
+
+        <div class="row">
+
+            <h2 class=""> Opps!! there is no Photo</h2>
+
+        </div>
+
+        {% endfor %}
+
+
+
+
+
+        
+    </div>
+
+</div>
+
+{% endblock %}
