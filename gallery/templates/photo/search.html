@@ -3,8 +3,8 @@
 <div class="container">
 
   <div class="row">
-    {% if locations%}
-      <h2>Found {{ location|length }} of searched term {{message}}</h2>
+    {% if locations %}
+      <h2>Found {{ locations|length }} of searched term {{message}}</h2>
     {% else %}
       <h2> There is no location for the search term {{message}}</h2>
     {% endif %}

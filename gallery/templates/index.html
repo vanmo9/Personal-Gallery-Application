@@ -4,20 +4,14 @@
 
 <div class="container">
     <div class="row">
-        {% for image in images %}
+        {% for photo in photos %}
 
         <div class="col-md-4">
-            <a href="">{{image.image_name.url}}  {{category.title}}   {{image.title}} </a>
+            <a href="">{{photo.photo_name.url}}  {{category.title}}   {{photo.title}} </a>
 
         </div>
 
-        {{% else %}}
-
-        <div class="row">
-
-            <h2 class=""> Opps!! there is no Photo</h2>
-
-        </div>
+   
 
         {% endfor %}
 
