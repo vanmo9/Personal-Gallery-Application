@@ -1,7 +1,7 @@
-<!-- {%extends 'photo/base.html'%}
+{%extends 'photo/base.html'%}
 {% include 'index.html'%}
 <h1> Welcomen </h1>
-{% for image in images %}
+{% for photo in photos %}
 {{image.title}}
-<img src="{{image.image.url}}">
-{% endfor %} -->
+<img src="{{photo.photo.url}}">
+{% endfor %}

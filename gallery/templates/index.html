@@ -1,12 +1,8 @@
-
-
-
-
-
 {%extends 'photo/base.html'%}
 {% block content %}
+<body background="https://fsb.zobj.net/crop.php?r=Tv_F6Wl4aJfhE6tNVBljxULxVAz31Nc6M1amVQaLNtUyxzhmbUqLNo8XQTXn850onRXKLsGFAfOjYrWAT2bnMcDlnNlfsuo54euBDy2NyfaMCrl4n3PGd8MnvPIjmfuSQ225cqRM2JHV9rhA">
 
-<div class="album py-5 bg-light">
+<div class="card-deck">
    <div class="container">
        <div class="row">
            {% for photo in photos %}         
@@ -15,7 +11,7 @@
                    <img src='{{photo.photo.url}}' alt="" class="card-img-top" width="100%" height="225">
                    <div class="card-body">
                        <p class="card-text">
-                           {{ photo.description }}
+                           
                        </p>
                        <div class="d-flex justify-content-between align-items-center">
                            <div class="btn-group">
@@ -23,6 +19,8 @@
                                    data-whatever="{{photo.id}}" data-toggle="modal" data-target="#{{photo.id}}"
                                    onclick="showinfo(go)">View Photo</button>
                            </div>
+                           {{ photo.photo.location }}
+
                        </div>
                    </div>
                </div>
@@ -45,14 +43,16 @@
                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
            </div>
            <div class="modal-body" style="text-align:center">
+                <a target="_blank" href="{{photo.photo.url}}" id="imagedirectlink" class="badge badge-success" >Photo Link</a>
                <img id="imageimage" class="figure-img img-fluid rounded" src='{{photo.photo.url}}'>
-               <p id="imagedescription">{{ photo.location }}</p>
-               <a target="_blank" href="{{photo.photo.url}}" id="imagedirectlink" class="btn btn-primary" >Direct image link</a>
-               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               <p id="imagedescription">{{ photo.photo.location }}</p>
+               
+               <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
            </div>
   
        </div>
    </div>
 </div>
+</body>
 {%endfor%}
 {% endblock %}
